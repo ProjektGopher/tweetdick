@@ -4,9 +4,10 @@ namespace Database\Factories;
 
 use App\Models\Team;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\AccountType;
 use Illuminate\Support\Str;
 use Laravel\Jetstream\Features;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory
 {
@@ -80,6 +81,42 @@ class UserFactory extends Factory
                 'twitter_nickname' => $this->faker->unique()->username(),
                 'twitter_avatar' => null,
                 'twitter_token' => Str::random(32),
+            ];
+        });
+    }
+
+    public function withFreeAccount()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'account_type' => AccountType::FREE,
+            ];
+        });
+    }
+
+    public function withPaidAccount()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'account_type' => AccountType::PAID,
+            ];
+        });
+    }
+
+    public function withSponsorAccount()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'account_type' => AccountType::SPONSOR,
+            ];
+        });
+    }
+
+    public function withAdminAccount()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'account_type' => AccountType::ADMIN,
             ];
         });
     }

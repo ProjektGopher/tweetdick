@@ -23,6 +23,8 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->timestamps();
 
+            $table->string('account_type')->nullable();
+
             // Twitter specific
             $table->string('twitter_id')->unique()->nullable();
             $table->string('twitter_nickname')->unique()->nullable();

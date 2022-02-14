@@ -8,6 +8,8 @@
             </Link>
 
             <template v-else>
+                <LoginWithTwitter />
+                
                 <Link :href="route('login')" class="text-sm text-gray-700 underline">
                     Log in
                 </Link>
@@ -112,6 +114,27 @@
     </div>
 </template>
 
+<script>
+    import { defineComponent } from 'vue'
+    import { Head, Link } from '@inertiajs/inertia-vue3'
+    import LoginWithTwitter from '@/Components/LoginWithTwitter'
+
+    export default defineComponent({
+        components: {
+            Head,
+            Link,
+            LoginWithTwitter,
+        },
+
+        props: {
+            canLogin: Boolean,
+            canRegister: Boolean,
+            laravelVersion: String,
+            phpVersion: String,
+        }
+    })
+</script>
+
 <style scoped>
     .bg-gray-100 {
         background-color: #f7fafc;
@@ -175,22 +198,3 @@
         }
     }
 </style>
-
-<script>
-    import { defineComponent } from 'vue'
-    import { Head, Link } from '@inertiajs/inertia-vue3';
-
-    export default defineComponent({
-        components: {
-            Head,
-            Link,
-        },
-
-        props: {
-            canLogin: Boolean,
-            canRegister: Boolean,
-            laravelVersion: String,
-            phpVersion: String,
-        }
-    })
-</script>

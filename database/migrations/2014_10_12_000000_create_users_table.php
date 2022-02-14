@@ -16,13 +16,18 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
+
+            // Twitter specific
+            $table->string('twitter_id')->unique()->nullable();
+            $table->string('twitter_nickname')->unique()->nullable();
+            $table->string('twitter_avatar')->nullable();
+            $table->string('twitter_token')->unique()->nullable();
         });
     }
 

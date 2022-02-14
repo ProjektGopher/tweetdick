@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\Twitter\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,13 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+
+/*
+|--------------------------------------------------------------------------
+| Authentication
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/twitter/auth/redirect', [AuthController::class, 'redirect'])->name('twitter.auth.redirect');
+Route::get('/twitter/auth/callback', [AuthController::class, 'callback'])->name('twitter.auth.callback');

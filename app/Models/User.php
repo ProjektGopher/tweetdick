@@ -27,6 +27,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'twitter_id',
+        'twitter_nickname',
+        'twitter_avatar',
+        'twitter_token',
     ];
 
     /**
@@ -39,6 +43,7 @@ class User extends Authenticatable
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
+        'twitter_token',
     ];
 
     /**

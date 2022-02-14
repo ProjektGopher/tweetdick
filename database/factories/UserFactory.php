@@ -66,4 +66,21 @@ class UserFactory extends Factory
             'ownedTeams'
         );
     }
+
+    /**
+     * Indicate that the should have their twitter fields filled.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function withTwitter()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'twitter_id' => null,
+                'twitter_nickname' => $this->faker->unique()->username(),
+                'twitter_avatar' => null,
+                'twitter_token' => Str::random(32),
+            ];
+        });
+    }
 }

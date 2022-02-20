@@ -25,6 +25,13 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/landing', function () {
+    return Inertia::render('Landing/Index', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');

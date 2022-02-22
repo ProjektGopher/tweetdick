@@ -6,7 +6,7 @@
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span class="sr-only">TweetDick</span>
-              <img class="h-8 w-auto sm:h-10" src="/img/logo-pixelated_400x400.png" alt="TweetDick Logo: pixellated twitter logo" />
+              <img class="h-8 w-auto sm:h-10" src="/img/logo-pixelated_400x400.png" alt="TweetDick Logo: pixelated twitter logo" />
             </a>
           </div>
           <div class="-mr-2 -my-2 md:hidden">

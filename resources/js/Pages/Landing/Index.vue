@@ -5,8 +5,8 @@
         <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span class="sr-only">Workflow</span>
-              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="" />
+              <span class="sr-only">TweetDick</span>
+              <img class="h-8 w-auto sm:h-10" src="/img/logo-pixelated_400x400.png" alt="TweetDick Logo: pixellated twitter logo" />
             </a>
           </div>
           <div class="-mr-2 -my-2 md:hidden">
@@ -61,7 +61,7 @@
               <div class="pt-5 pb-6 px-5">
                 <div class="flex items-center justify-between">
                   <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="Workflow" />
+                    <img class="h-8 w-auto" src="/img/logo-pixelated_400x400.png" alt="TweetDick" />
                   </div>
                   <div class="-mr-2">
                     <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -360,7 +360,7 @@
               <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
             </a>
           </div>
-          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022 ProjektGopher Multimedia. All rights reserved.</p>
         </div>
       </div>
     </footer>

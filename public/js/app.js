@@ -27011,10 +27011,10 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   href: "#"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "sr-only"
-}, "Workflow"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+}, "TweetDick"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   "class": "h-8 w-auto sm:h-10",
-  src: "https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg",
-  alt: ""
+  src: "/img/logo-pixelated_400x400.png",
+  alt: "TweetDick Logo: pixellated twitter logo"
 })])], -1
 /* HOISTED */
 );
@@ -27098,8 +27098,8 @@ var _hoisted_20 = {
 
 var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   "class": "h-8 w-auto",
-  src: "https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg",
-  alt: "Workflow"
+  src: "/img/logo-pixelated_400x400.png",
+  alt: "TweetDick"
 })], -1
 /* HOISTED */
 );
@@ -27405,7 +27405,7 @@ var _hoisted_93 = {
 
 var _hoisted_94 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-8 text-base text-gray-400 md:mt-0 md:order-1"
-}, "© 2020 Workflow, Inc. All rights reserved.", -1
+}, "© 2022 ProjektGopher Multimedia. All rights reserved.", -1
 /* HOISTED */
 );
 

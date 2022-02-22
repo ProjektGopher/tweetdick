@@ -117,7 +117,7 @@
 <script>
     import { defineComponent } from 'vue'
     import { Head, Link } from '@inertiajs/inertia-vue3'
-    import LoginWithTwitter from '@/Components/LoginWithTwitter'
+    import LoginWithTwitter from '@/Components/LoginWithTwitter.vue'
 
     export default defineComponent({
         components: {

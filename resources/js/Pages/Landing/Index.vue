@@ -6,7 +6,7 @@
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span class="sr-only">TweetDick</span>
-              <img class="h-8 w-auto sm:h-10" src="/img/logo-pixelated_400x400.png" alt="TweetDick Logo: pixelated twitter logo" />
+              <img class="h-8 w-auto sm:h-10" :src="'/img/logo-pixelated_400x400.png'" alt="TweetDick Logo: pixelated twitter logo" />
             </a>
           </div>
           <div class="-mr-2 -my-2 md:hidden">
@@ -61,7 +61,7 @@
               <div class="pt-5 pb-6 px-5">
                 <div class="flex items-center justify-between">
                   <div>
-                    <img class="h-8 w-auto" src="/img/logo-pixelated_400x400.png" alt="TweetDick" />
+                    <img class="h-8 w-auto" :src="'/img/logo-pixelated_400x400.png'" alt="TweetDick" />
                   </div>
                   <div class="-mr-2">
                     <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -110,7 +110,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div class="absolute inset-0">
-              <img class="h-full w-full object-cover" src="/img/angry-casual-brunette-woman-using-smartphone-isolated-on-a-gray-background-SBI-302774441.jpg" alt="Woman looking at phone, disgusted." />
+              <img class="h-full w-full object-cover" :src="'/img/angry-casual-brunette-woman-using-smartphone-isolated-on-a-gray-background-SBI-302774441.jpg'" alt="Woman looking at phone, disgusted." />
               <div class="absolute inset-0 bg-gradient-to-r from-purple-800/25 to-indigo-700/25 mix-blend-multiply" />
             </div>
             <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">

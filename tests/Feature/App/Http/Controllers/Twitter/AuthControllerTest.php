@@ -24,7 +24,7 @@ it('saves a new twitter user to the database, logs in, and redirects to the dash
     $this->expect(auth()->user()->twitter_id)->toBe(twitter_login_fixture()->id);
 });
 
-it('updates an existing twitter users token and log in');
+it('updates an existing twitter users token and logs in');
 it('merges accounts with the same email');
 
 /*

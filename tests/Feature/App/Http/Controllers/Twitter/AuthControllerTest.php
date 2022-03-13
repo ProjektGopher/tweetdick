@@ -4,13 +4,15 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
+beforeEach(fn() => $this->artisan('migrate:fresh'));
+
 it('has twitter auth routes', function () {
     $this->assertTrue(Route::has('twitter.auth.redirect'));
     $this->assertTrue(Route::has('twitter.auth.callback'));
 });
 
 it('saves a new twitter user to the database, logs in, and redirects to the dashboard', function () {
-    $this->withoutExceptionHandling();
+    // $this->withoutExceptionHandling();
 
     Socialite::shouldReceive('driver->user')
         ->once()
@@ -24,7 +26,29 @@ it('saves a new twitter user to the database, logs in, and redirects to the dash
     $this->expect(auth()->user()->twitter_id)->toBe(twitter_login_fixture()->id);
 });
 
-it('updates an existing twitter users token and logs in');
+it('updates an existing twitter users token and logs in', function () {
+    // $this->withoutExceptionHandling();
+
+    User::factory()->create([
+        'twitter_id' => twitter_login_fixture()->id,
+    ]);
+
+    Socialite::shouldReceive('driver->user')
+        ->once()
+        ->andReturn(twitter_login_fixture());
+
+    // sanity checks
+    $this->assertCount(1, User::all());
+    $this->assertFalse(User::first()->name === 'TweetDick');
+
+    $this->get(route('twitter.auth.callback'))
+        ->assertRedirect(route('dashboard'));
+    $this->assertCount(1, User::all());
+
+    $this->expect(auth()->user()->twitter_id)->toBe(twitter_login_fixture()->id);
+    $this->assertTrue(User::first()->name === 'TweetDick');
+});
+
 it('merges accounts with the same email');
 
 /*

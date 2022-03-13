@@ -26,27 +26,35 @@ it('saves a new twitter user to the database, logs in, and redirects to the dash
     $this->expect(auth()->user()->twitter_id)->toBe(twitter_login_fixture()->id);
 });
 
-it('updates an existing twitter users token and logs in', function () {
+it('updates an existing twitter users token and info then logs in', function () {
     // $this->withoutExceptionHandling();
 
+    // arrange
     User::factory()->create([
         'twitter_id' => twitter_login_fixture()->id,
     ]);
-
     Socialite::shouldReceive('driver->user')
         ->once()
         ->andReturn(twitter_login_fixture());
 
     // sanity checks
     $this->assertCount(1, User::all());
-    $this->assertFalse(User::first()->name === 'TweetDick');
+    $this->expect(User::first()->name)
+        ->not()->toBe(twitter_login_fixture()->name);
+    $this->expect(User::first()->twitter_token)
+        ->not()->toBe(twitter_login_fixture()->token);
 
+    // act
     $this->get(route('twitter.auth.callback'))
         ->assertRedirect(route('dashboard'));
     $this->assertCount(1, User::all());
 
+    // assert
     $this->expect(auth()->user()->twitter_id)->toBe(twitter_login_fixture()->id);
-    $this->assertTrue(User::first()->name === 'TweetDick');
+    $this->expect(User::first()->name)
+        ->toBe(twitter_login_fixture()->name);
+    $this->expect(User::first()->twitter_token)
+        ->toBe(twitter_login_fixture()->token);
 });
 
 it('merges accounts with the same email');

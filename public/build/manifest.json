@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app.d5fa8de9.js",
+    "file": "assets/app.aff5d3ee.js",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "imports": [
@@ -19,9 +19,10 @@
       "resources/js/Pages/Auth/ResetPassword.vue",
       "resources/js/Pages/Auth/TwoFactorChallenge.vue",
       "resources/js/Pages/Auth/VerifyEmail.vue",
+      "_AlternatingFeature.a3d8f844.js",
       "resources/js/Pages/Landing/Error.vue",
       "resources/js/Pages/Landing/Footer.vue",
-      "_GradientFeature.2576e1f7.js",
+      "resources/js/Pages/Landing/GradientFeature.vue",
       "resources/js/Pages/Landing/Hero.vue",
       "resources/js/Pages/Landing/Index.vue",
       "resources/js/Pages/Landing/LogoCloud.vue",
@@ -352,6 +353,21 @@
       "_plugin-vue_export-helper.21dcd24c.js"
     ]
   },
+  "_AlternatingFeature.a3d8f844.js": {
+    "file": "assets/AlternatingFeature.a3d8f844.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_plugin-vue_export-helper.21dcd24c.js",
+      "_InboxIcon.f4d84bae.js",
+      "_vendor.da992497.js"
+    ]
+  },
+  "_InboxIcon.f4d84bae.js": {
+    "file": "assets/InboxIcon.f4d84bae.js",
+    "imports": [
+      "_vendor.da992497.js"
+    ]
+  },
   "resources/js/Pages/Landing/Error.vue": {
     "file": "assets/Error.f7049a8d.js",
     "src": "resources/js/Pages/Landing/Error.vue",
@@ -371,11 +387,13 @@
       "_vendor.da992497.js"
     ]
   },
-  "_GradientFeature.2576e1f7.js": {
-    "file": "assets/GradientFeature.2576e1f7.js",
+  "resources/js/Pages/Landing/GradientFeature.vue": {
+    "file": "assets/GradientFeature.196966a3.js",
+    "src": "resources/js/Pages/Landing/GradientFeature.vue",
     "isDynamicEntry": true,
     "imports": [
       "_plugin-vue_export-helper.21dcd24c.js",
+      "_InboxIcon.f4d84bae.js",
       "_vendor.da992497.js"
     ]
   },
@@ -389,7 +407,7 @@
     ]
   },
   "resources/js/Pages/Landing/Index.vue": {
-    "file": "assets/Index.7d4c54f4.js",
+    "file": "assets/Index.a8009f15.js",
     "src": "resources/js/Pages/Landing/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -397,11 +415,13 @@
       "resources/js/Pages/Landing/Hero.vue",
       "resources/js/Pages/Landing/Pricing.vue",
       "resources/js/Pages/Landing/LogoCloud.vue",
-      "_GradientFeature.2576e1f7.js",
-      "_LoginWithTwitter.073e5c25.js",
+      "resources/js/Pages/Landing/GradientFeature.vue",
+      "_AlternatingFeature.a3d8f844.js",
       "resources/js/Pages/Landing/Footer.vue",
+      "_LoginWithTwitter.073e5c25.js",
       "_useIcons.65d9a3e0.js",
-      "_plugin-vue_export-helper.21dcd24c.js"
+      "_plugin-vue_export-helper.21dcd24c.js",
+      "_InboxIcon.f4d84bae.js"
     ]
   },
   "resources/js/Pages/Landing/Pricing.vue": {

@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app.c0038c2d.js",
+    "file": "assets/app.d5fa8de9.js",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "imports": [
@@ -20,7 +20,8 @@
       "resources/js/Pages/Auth/TwoFactorChallenge.vue",
       "resources/js/Pages/Auth/VerifyEmail.vue",
       "resources/js/Pages/Landing/Error.vue",
-      "_Footer.6ea0010a.js",
+      "resources/js/Pages/Landing/Footer.vue",
+      "_GradientFeature.2576e1f7.js",
       "resources/js/Pages/Landing/Hero.vue",
       "resources/js/Pages/Landing/Index.vue",
       "resources/js/Pages/Landing/LogoCloud.vue",
@@ -85,22 +86,30 @@
     ]
   },
   "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome.b7bdcd45.js",
+    "file": "assets/Welcome.35779f03.js",
     "src": "resources/js/Pages/Welcome.vue",
     "isDynamicEntry": true,
     "imports": [
       "_vendor.da992497.js",
-      "_LoginWithTwitter.ca6ad77b.js",
-      "_plugin-vue_export-helper.21dcd24c.js"
+      "_LoginWithTwitter.073e5c25.js",
+      "_plugin-vue_export-helper.21dcd24c.js",
+      "_useIcons.65d9a3e0.js"
     ],
     "css": [
       "assets/Welcome.88d9f1e5.css"
     ]
   },
-  "_LoginWithTwitter.ca6ad77b.js": {
-    "file": "assets/LoginWithTwitter.ca6ad77b.js",
+  "_LoginWithTwitter.073e5c25.js": {
+    "file": "assets/LoginWithTwitter.073e5c25.js",
     "imports": [
+      "_useIcons.65d9a3e0.js",
       "_plugin-vue_export-helper.21dcd24c.js",
+      "_vendor.da992497.js"
+    ]
+  },
+  "_useIcons.65d9a3e0.js": {
+    "file": "assets/useIcons.65d9a3e0.js",
+    "imports": [
       "_vendor.da992497.js"
     ]
   },
@@ -352,12 +361,22 @@
       "_vendor.da992497.js"
     ]
   },
-  "_Footer.6ea0010a.js": {
-    "file": "assets/Footer.6ea0010a.js",
+  "resources/js/Pages/Landing/Footer.vue": {
+    "file": "assets/Footer.c26034c5.js",
+    "src": "resources/js/Pages/Landing/Footer.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor.da992497.js",
-      "_plugin-vue_export-helper.21dcd24c.js"
+      "_useIcons.65d9a3e0.js",
+      "_plugin-vue_export-helper.21dcd24c.js",
+      "_vendor.da992497.js"
+    ]
+  },
+  "_GradientFeature.2576e1f7.js": {
+    "file": "assets/GradientFeature.2576e1f7.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_plugin-vue_export-helper.21dcd24c.js",
+      "_vendor.da992497.js"
     ]
   },
   "resources/js/Pages/Landing/Hero.vue": {
@@ -370,7 +389,7 @@
     ]
   },
   "resources/js/Pages/Landing/Index.vue": {
-    "file": "assets/Index.ad64aa76.js",
+    "file": "assets/Index.7d4c54f4.js",
     "src": "resources/js/Pages/Landing/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -378,8 +397,10 @@
       "resources/js/Pages/Landing/Hero.vue",
       "resources/js/Pages/Landing/Pricing.vue",
       "resources/js/Pages/Landing/LogoCloud.vue",
-      "_LoginWithTwitter.ca6ad77b.js",
-      "_Footer.6ea0010a.js",
+      "_GradientFeature.2576e1f7.js",
+      "_LoginWithTwitter.073e5c25.js",
+      "resources/js/Pages/Landing/Footer.vue",
+      "_useIcons.65d9a3e0.js",
       "_plugin-vue_export-helper.21dcd24c.js"
     ]
   },

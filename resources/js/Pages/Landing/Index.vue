@@ -177,28 +177,7 @@
         </div>
       </div>
 
-      <!-- Gradient Feature Section -->
-      <div class="bg-gradient-to-r from-purple-800 to-indigo-700">
-        <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-          <h2 class="text-3xl font-extrabold text-white tracking-tight">Inbox support built for efficiency</h2>
-          <p class="mt-4 max-w-3xl text-lg text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis in.</p>
-          <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
-            <div v-for="feature in features" :key="feature.name">
-              <div>
-                <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                  <component :is="feature.icon" class="h-6 w-6 text-white" aria-hidden="true" />
-                </span>
-              </div>
-              <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">{{ feature.name }}</h3>
-                <p class="mt-2 text-base text-purple-200">
-                  {{ feature.description }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <GradientFeature />
 
       <!-- Stats section -->
       <div class="relative bg-gray-900">
@@ -249,28 +228,21 @@
 </template>
 
 <script lang="ts">
-import { DefineComponent } from 'vue'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import {
   AnnotationIcon,
   ChatAlt2Icon,
-  ChatAltIcon,
-  DocumentReportIcon,
-  HeartIcon,
   InboxIcon,
   MenuIcon,
-  PencilAltIcon,
   QuestionMarkCircleIcon,
-  ReplyIcon,
   SparklesIcon,
-  TrashIcon,
-  UsersIcon,
   XIcon,
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 import Hero from './Hero.vue'
 import Pricing from './Pricing.vue'
 import LogoCloud from './LogoCloud.vue'
+import GradientFeature from './GradientFeature.vue'
 import LoginWithTwitter from '@/Components/LoginWithTwitter.vue'
 import Footer from './Footer.vue'
 import { icons } from '@/Composables/useIcons'
@@ -300,48 +272,6 @@ const solutions = [
     icon: QuestionMarkCircleIcon,
   },
 ]
-const features = [
-  {
-    name: 'Unlimited Inboxes',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: InboxIcon,
-  },
-  {
-    name: 'Manage Team Members',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: UsersIcon,
-  },
-  {
-    name: 'Spam Report',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: TrashIcon,
-  },
-  {
-    name: 'Compose in Markdown',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: PencilAltIcon,
-  },
-  {
-    name: 'Team Reporting',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: DocumentReportIcon,
-  },
-  {
-    name: 'Saved Replies',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ReplyIcon,
-  },
-  {
-    name: 'Email Commenting',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ChatAltIcon,
-  },
-  {
-    name: 'Connect with Customers',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: HeartIcon,
-  },
-]
 const metrics = [
   { id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.' },
   { id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.' },
@@ -363,6 +293,7 @@ export default {
     Hero,
     Pricing,
     LogoCloud,
+    GradientFeature,
     Footer,
     LoginWithTwitter,
   },
@@ -370,7 +301,6 @@ export default {
     return {
       icons,
       solutions,
-      features,
       metrics,
     }
   },

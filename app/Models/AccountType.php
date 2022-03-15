@@ -10,4 +10,9 @@ enum AccountType: string
     case ADMIN = 'admin';
     case DEVELOPER = 'developer';
 
+    public function canRegister(): bool
+    {
+        return $this !== AccountType::ADMIN;
+    }
+
 }

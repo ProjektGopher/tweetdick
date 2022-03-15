@@ -10,7 +10,7 @@
           tracking-wide
         "
       >
-        Trusted by over 5 very average small businesses
+        Supported by over 5 very thoughtful businesses
       </p>
       <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
         <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">

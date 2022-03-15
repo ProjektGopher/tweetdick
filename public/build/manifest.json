@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app.1cbf2dd5.js",
+    "file": "assets/app.e51c6ccd.js",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "imports": [
@@ -440,7 +440,7 @@
     ]
   },
   "resources/js/Pages/Landing/Index.vue": {
-    "file": "assets/Index.a4dfb062.js",
+    "file": "assets/Index.395cc1fd.js",
     "src": "resources/js/Pages/Landing/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -480,7 +480,7 @@
     ]
   },
   "resources/js/Pages/Landing/Statistics.vue": {
-    "file": "assets/Statistics.1d02a918.js",
+    "file": "assets/Statistics.b65e5384.js",
     "src": "resources/js/Pages/Landing/Statistics.vue",
     "isDynamicEntry": true,
     "imports": [

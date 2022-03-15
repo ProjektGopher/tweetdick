@@ -1,8 +1,11 @@
 <?php
 
 use Inertia\Inertia;
+use App\Models\AccountType;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\Twitter\AuthController;
 
 /*
@@ -16,16 +19,18 @@ use App\Http\Controllers\Twitter\AuthController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Landing/Index', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-    ]);
-});
+Route::get('/', LandingPageController::class)
+    ->middleware(['guest'])
+    ->name('landing');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+Route::get('/register/as/{type}', function (AccountType $type) {
+    session(['account_type' => $type]);
+    return redirect()->route('twitter.auth.redirect');
+})->middleware(['guest'])->name('register.as');
+
+Route::get('/dashboard', DashboardController::class)
+    ->middleware(['auth:sanctum', 'verified'])
+    ->name('dashboard');
 
 
 /*

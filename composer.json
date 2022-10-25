@@ -14,7 +14,7 @@
         "inertiajs/inertia-laravel": "^0.6",
         "innocenzi/laravel-vite": "0.2.*",
         "laravel/framework": "^9.37",
-        "laravel/jetstream": "^2.9",
+        "laravel/jetstream": "^2.12",
         "laravel/sanctum": "^3.0",
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7",
